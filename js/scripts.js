@@ -1,12 +1,9 @@
 // Charmander is #4, Totodile is #158, Persian is #53 - for future reference, because I'm clueless about Pokemon.
 
 let pokemonRepository = (function(){
-  let pokemonList = [
-    {name: 'Charmander', type: ['fire', 'lizard'], height: 0.6 },
-    {name: 'Totodile', type: ['water', 'biting'], height: 0.6 },
-    {name: 'Persian', type: ['cat', 'limber'], height: 1}
-  ];
-   
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+ 
     function getAll () {
       return pokemonList;
     }
@@ -23,25 +20,73 @@ let pokemonRepository = (function(){
       listItem.appendChild(button);
       listOfPokemon.appendChild(listItem);
       button.addEventListener('click', function () {
-        showDetails(pokemon.name);
+        showDetails(pokemon);
       });
     }
-    function showDetails (pokemon) {
-      console.log(pokemon);
+    // function showDetails (pokemon) {
+    //   console.log(pokemon);
+    // }
+
+    function loadList() {
+      return fetch(apiUrl).then(function(response) {
+        return response.json();
+      }).then(function (json) {
+        json.results.forEach(function(item) {
+          let pokemon = {
+            name: item.name,
+            detailsUrl: item.url
+          };
+          add(pokemon);
+        });
+      }).catch(function(e) {
+        console.error(e);
+      })
+    }
+
+    function loadDetails(item) {
+      let url = item.detailsUrl;
+      return fetch(url).then(function (response) {
+        return response.json();
+      }).then(function(details){
+        item.imageUrl = details.sprites.front_default;
+        item.height = details.height;
+        item.types = details.types;
+      }).catch(function (e) {
+        console.error(e);
+      });
+    }
+
+    function showDetails(item) {
+      pokemonRepository.loadDetails(item).then(function(){
+        console.log(item);
+      });
     }
     return {
     getAll: getAll,
     add: add,
     addListItem: addListItem,
-    }
+    loadList: loadList,
+    loadDetails: loadDetails,
+    showDetails: showDetails
+    };
   
   })();
   
-  
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon)
+pokemonRepository.loadList().then(function() {
+  pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon)
+  });
+})
 
-});
+
+// function showDetails(pokemon) {
+//   loadDetails(pokemon).then(function() {
+//     console.log(pokemon);
+//   });
+// }
+
+
+
       // function listNames(_pokemon) {
       //   addListItem(item);
       // document.write('<p id="list_items">' + item.name + ' (height) ' + item.height + '</p>');
