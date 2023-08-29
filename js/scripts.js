@@ -18,6 +18,10 @@ let pokemonRepository = (function(){
       let button = document.createElement('button');
       listItem.setAttribute('id', 'show-modal')
       button.innerText = pokemon.name;
+
+      // optional styling
+      button.style.fontVariant = 'small-caps';
+
       button.classList.add('pokemon-button');
       listItem.appendChild(button);
       listOfPokemon.appendChild(listItem);
@@ -72,6 +76,10 @@ let pokemonRepository = (function(){
       let contentName = document.createElement('p');
       contentName.innerText = pokeName.name;
 
+      // optional styling
+      contentName.style.fontVariant = 'small-caps';
+      contentName.style.fontSize = '20px';
+
       let contentHeight = document.createElement('p');
       contentHeight.innerText = pokeHeight.height;
 
@@ -119,7 +127,6 @@ let pokemonRepository = (function(){
       });
     }
 
-  
 
      
     return {
