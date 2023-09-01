@@ -16,7 +16,7 @@ Secondary Color (pale orange): #e8d3c3;
 
 
 body {
-  background-color: #FBFBF3;
+  background-color: #fff;
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Mulish', sans-serif; */
   font-weight: 400;
@@ -48,6 +48,7 @@ h3 {
 #main_logo {
   width: 250px;
   text-align: center;
+  margin-top: 20px;
 }
 
 * {
