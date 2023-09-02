@@ -12,7 +12,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Pokedex</a>
+            <img src="img/3151570_augmented_game_go_gym_pokemon_icon.png" alt="pokemon logo" id="main_logo" class="img-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,27 +34,21 @@
             </div>
           </nav>
 
-        <div class="logo-container">
-            <img src="img/3151570_augmented_game_go_gym_pokemon_icon.png" alt="pokemon logo" id="main_logo">
+        <div class="page-title">
+            <h1>POKEDEX</h1>
         </div>
 
-        	<!-- Button trigger modal -->
-	    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-        </button>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="pokeModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModal" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="pokeModalLabel">Modal title</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>
-                <div class="modal-body">
-                ...
-                </div>
+                <div class="modal-body"></div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
@@ -63,9 +57,6 @@
             </div>
         </div>
 
-        <!-- <div class="pokemon-list">
-            <h2 id="pokemon-list_Title">Here are your Pokemon:</h2>
-        </div> -->
         <ul class="pokemon-list list-group"></ul>
 
         <div id="modal-container"></div>
