@@ -1,24 +1,9 @@
-/* Colours used: 
 
-Main text color (dark grey): #101111;
-Heading color (darker grey): #050505; 
-Background color (pale yellow): #FBFBF3;
-Primary Color (dark blue): #263752; 
-Secondary Color (pale orange): #e8d3c3;
-*/
-
-/* .root {
-  --primary-color: #263752;
-  --main-text-color: #101111;
-  --background-color: #FBFBF3;
-  
-} */
 
 
 body {
   background-color: #fff;
   font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Mulish', sans-serif; */
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;  
@@ -55,7 +40,6 @@ h3 {
 }
 
 .pokemon-list {
-  /* background-color: #e8d3c3; */
   margin: auto;
   margin-top: 25px;
   max-width: 500px;
