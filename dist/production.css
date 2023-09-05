@@ -1,0 +1,77 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body {
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;  
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.page-title {
+  display: block;
+  text-align: center;
+}
+
+#main_logo {
+  width: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pokemon-list {
+  margin: auto;
+  margin-top: 25px;
+  max-width: 500px;
+  list-style-type: none;
+  border-radius: 5%;
+}
+
+#pokemon-list_Title {
+  text-align: center;
+}
+
+
+.pokemon-button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  -o-transition-duration: 0.4s;
+     transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
