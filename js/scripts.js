@@ -1,4 +1,3 @@
-// Charmander is #4, Totodile is #158, Persian is #53 - for future reference, because I'm clueless about Pokemon.
 
 let pokemonRepository = (function(){
   let pokemonList = [];
@@ -103,13 +102,6 @@ let pokemonRepository = (function(){
         hideModal();
       }
     })
-
-    // modalContainer.addEventListener('click', (e) => {
-    //   let target = e.target;
-    //   if (target === modalContainer) {
-    //     hideModal();
-    //   }
-    // })
 
     function showDetails(item) {
       loadDetails(item).then(function () {

@@ -1,5 +1,9 @@
-
-
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 body {
   background-color: #fff;
@@ -36,7 +40,8 @@ h3 {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .pokemon-list {
@@ -63,10 +68,10 @@ h3 {
   font-size: 16px;
   margin: 4px 2px;
   -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+     transition-duration: 0.4s;
   cursor: pointer;
   background-color: white;
   color: black;
   border: 2px solid #4caf50;
 }
-
